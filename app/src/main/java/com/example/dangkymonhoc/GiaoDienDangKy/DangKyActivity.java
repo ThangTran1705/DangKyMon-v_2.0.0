@@ -216,7 +216,7 @@ public class DangKyActivity extends AppCompatActivity {
                                         tvCaHoc.setText(listLopHoc.get(i).getCaHoc());
                                         tvNgayHoc.setText(listLopHoc.get(i).getNgay());
                                         Toast.makeText(DangKyActivity.this,listLopHoc.get(i).getLopHoc(),Toast.LENGTH_LONG).show();
-                                        final String lop = listLopHoc.get(i).getLopHoc();
+                                        final String lop = String.valueOf(listLopHoc.get(i).getIdLopHoc());
                                         btnSaveInForm.setOnClickListener(new View.OnClickListener() {
                                             @Override
                                             public void onClick(View v) {
