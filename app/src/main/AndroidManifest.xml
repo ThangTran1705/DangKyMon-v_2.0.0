@@ -11,8 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GiaoDienDangKy.DangKyActivity"></activity>
-        <activity android:name=".GiaoDienDangKy.TrangthaiduyetActivity" />
+        <activity android:name=".GiaoDienDangKy.TrangthaiduyetActivity"></activity>
         <activity android:name=".GiaoDien.ResetPassActivity" />
         <activity android:name=".GiaoDien.UserActivity" />
         <activity android:name=".GiaoDien.EditPassActivity" />

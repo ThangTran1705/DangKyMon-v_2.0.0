@@ -39,7 +39,9 @@ public class UserActivity extends AppCompatActivity {
         imgback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                Intent i = new Intent(UserActivity.this,SettingActivity.class);
+//                i.putExtra("maSV",idSV);
+                startActivity(i);
             }
         });
         Intent intent = getIntent();
