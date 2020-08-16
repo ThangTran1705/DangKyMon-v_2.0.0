@@ -44,32 +44,28 @@ public class LopHocAdapter extends BaseAdapter {
 
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
-        LayoutInflater inflater = LayoutInflater.from(context);
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         convertView = inflater.inflate(layout,null);
 
         tvLopHoc = convertView.findViewById(R.id.tvLopHoc);
-        tvTenMonHoc = convertView.findViewById(R.id.tvTenMonHoc);
-        tvGiangVien = convertView.findViewById(R.id.tvGiangVien);
-        tvCaHoc = convertView.findViewById(R.id.tvCaHoc);
+
 
         tvLopHoc.setText(listLopHoc.get(position).getLopHoc());
-        tvTenMonHoc.setText(listLopHoc.get(position).getTenMonHoc());
-        tvGiangVien.setText(listLopHoc.get(position).getGiangVien());
-        tvCaHoc.setText(listLopHoc.get(position).getCaHoc());
 
-        convertView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, FormDangKyActivity.class);
-                intent.putExtra("idSV",listLopHoc.get(position).getIdSV());
-                intent.putExtra("lopHoc",listLopHoc.get(position).getLopHoc());
-                intent.putExtra("monhoc",listLopHoc.get(position).getTenMonHoc());
-                intent.putExtra("giangvien",listLopHoc.get(position).getGiangVien());
-                intent.putExtra("cahoc",listLopHoc.get(position).getCaHoc());
 
-                v.getContext().startActivity(intent);
-            }
-        });
+//        convertView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(context, FormDangKyActivity.class);
+//                intent.putExtra("idSV",listLopHoc.get(position).getIdSV());
+//                intent.putExtra("lopHoc",listLopHoc.get(position).getLopHoc());
+//                intent.putExtra("monhoc",listLopHoc.get(position).getTenMonHoc());
+//                intent.putExtra("giangvien",listLopHoc.get(position).getGiangVien());
+//                intent.putExtra("cahoc",listLopHoc.get(position).getCaHoc());
+//
+//                v.getContext().startActivity(intent);
+//            }
+//        });
 
         return convertView;
     }

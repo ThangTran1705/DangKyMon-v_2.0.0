@@ -42,7 +42,7 @@ public class MonHocAdapter extends BaseAdapter {
 
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
-        LayoutInflater inflater = LayoutInflater.from(context);
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         convertView = inflater.inflate(layout,null);
 
         tvMaMon = convertView.findViewById(R.id.tvMaMon);
@@ -50,15 +50,15 @@ public class MonHocAdapter extends BaseAdapter {
         tvMaMon.setText(listMonHoc.get(position).getMaMon());
         tvMonHoc.setText(listMonHoc.get(position).getMonHoc());
 
-        convertView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, LopHocActivity.class);
-                intent.putExtra("idMonHoc",String.valueOf(listMonHoc.get(position).getIdMonHoc()));
-                intent.putExtra("idSV",listMonHoc.get(position).getIdSV());
-                v.getContext().startActivity(intent);
-            }
-        });
+//        convertView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(context, LopHocActivity.class);
+//                intent.putExtra("idMonHoc",String.valueOf(listMonHoc.get(position).getIdMonHoc()));
+//                intent.putExtra("idSV","1");
+//                v.getContext().startActivity(intent);
+//            }
+//        });
 
         return convertView;
     }

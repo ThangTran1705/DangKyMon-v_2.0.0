@@ -16,7 +16,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.dangkymonhoc.GiaoDienDangKy.MonHocActivity;
+import com.example.dangkymonhoc.GiaoDienDangKy.DangKyActivity;
 import com.example.dangkymonhoc.GiaoDienDangKy.NganhHocActivity;
 
 import com.example.dangkymonhoc.GiaoDienDangKy.TrangthaiduyetActivity;
@@ -30,8 +30,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
-    ImageView img_dangKyMH, img_monHoc, img_lichHoc, img_caiDat;
-    TextView tvMssv,tvTen,tv_DangkyMH,tv_LichHoc,tv_monHoc,tv_caiDat;
+    ImageView img_nganhHoc, img_monHoc, img_lichHoc, img_thongTin;
+    TextView tvMssv,tvTen;
     String idSV, maSV,TenSinhVien;
 
     private RequestQueue tQueue;
@@ -41,7 +41,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_home);
         Intent intent = getIntent();
         maSV = intent.getStringExtra("maSV");
-        Log.d("AA",maSV);
+//        Log.d("AA",maSV);
         AnhXa();
         getHome();
         Click();
@@ -103,26 +103,18 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
 
     private void AnhXa(){
-        img_dangKyMH = findViewById(R.id.img_dangKyMH);
+        img_nganhHoc = findViewById(R.id.img_nganhHoc);
         img_monHoc = findViewById(R.id.img_monHoc);
         img_lichHoc = findViewById(R.id.img_lichHoc);
-        img_caiDat = findViewById(R.id.img_caiDat);
-        tv_DangkyMH = findViewById(R.id.tv_dangKyMH);
-        tv_LichHoc = findViewById(R.id.tv_lichHoc);
-        tv_monHoc = findViewById(R.id.tv_monHoc);
-        tv_caiDat = findViewById(R.id.tv_caiDat);
+        img_thongTin = findViewById(R.id.img_caiDat);
     }
 
     private void Click(){
 
-        img_dangKyMH.setOnClickListener(this);
+        img_nganhHoc.setOnClickListener(this);
         img_monHoc.setOnClickListener(this);
         img_lichHoc.setOnClickListener(this);
-        img_caiDat.setOnClickListener(this);
-        tv_DangkyMH.setOnClickListener(this);
-        tv_LichHoc.setOnClickListener(this);
-        tv_monHoc.setOnClickListener(this);
-        tv_caiDat.setOnClickListener(this);
+        img_thongTin.setOnClickListener(this);
     }
 
 
@@ -130,8 +122,8 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.img_dangKyMH:
-                Intent nganhhoc = new Intent(this, NganhHocActivity.class);
+            case R.id.img_nganhHoc:
+                Intent nganhhoc = new Intent(this, DangKyActivity.class);
                 nganhhoc.putExtra("idSV",idSV);
                 startActivity(nganhhoc);
                 break;
@@ -149,27 +141,6 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 Intent thongtin = new Intent(this, SettingActivity.class);
                 thongtin.putExtra("maSV",maSV);
                 startActivity(thongtin);
-                break;
-
-            case R.id.tv_dangKyMH:
-                Intent tv_DKMH = new Intent(this, NganhHocActivity.class);
-                tv_DKMH.putExtra("idSV",idSV);
-                startActivity(tv_DKMH);
-                break;
-            case R.id.tv_lichHoc:
-                Intent tv_lichHoc = new Intent(this, LichHocActivity.class);
-                tv_lichHoc.putExtra("idSV",idSV);
-                startActivity(tv_lichHoc);
-                break;
-            case R.id.tv_monHoc:
-                Intent tv_monHoc = new Intent(this, TrangthaiduyetActivity.class);
-                tv_monHoc.putExtra("idSV",idSV);
-                startActivity(tv_monHoc);
-                break;
-            case R.id.tv_caiDat:
-                Intent tv_caiDat = new Intent(this, SettingActivity.class);
-                tv_caiDat.putExtra("maSV",maSV);
-                startActivity(tv_caiDat);
                 break;
 
         }
