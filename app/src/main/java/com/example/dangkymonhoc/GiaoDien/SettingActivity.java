@@ -88,8 +88,9 @@ public class SettingActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(SettingActivity.this, HomeActivity.class);
-//                i.putExtra("idSV",idSV);
+                i.putExtra("maSV",maSV);
                 startActivity(i);
+                finish();
             }
         });
 
