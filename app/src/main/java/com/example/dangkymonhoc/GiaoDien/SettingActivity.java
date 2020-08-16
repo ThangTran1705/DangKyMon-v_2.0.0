@@ -52,8 +52,7 @@ public class SettingActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(SettingActivity.this, LanguageActivity.class);
-//                i.putExtra("maSV",maSV);
-
+                i.putExtra("maSV",maSV);
                 startActivity(i);
             }
         });
