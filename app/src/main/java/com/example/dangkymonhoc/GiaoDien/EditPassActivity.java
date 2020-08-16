@@ -29,9 +29,10 @@ public class EditPassActivity extends AppCompatActivity {
         img_Back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(EditPassActivity.this, SettingActivity.class);
-                i.putExtra("maSV",maSV);
-                startActivity(i);
+//                Intent i = new Intent(EditPassActivity.this, SettingActivity.class);
+//                i.putExtra("maSV",maSV);
+//                startActivity(i);
+                finish();
 
             }
         });

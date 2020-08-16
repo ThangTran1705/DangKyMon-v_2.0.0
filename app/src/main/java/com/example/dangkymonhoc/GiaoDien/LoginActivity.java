@@ -2,11 +2,14 @@ package com.example.dangkymonhoc.GiaoDien;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,13 +34,47 @@ public class LoginActivity extends AppCompatActivity {
     EditText edtUser,edtPass;
     Button btnLogin;
     TextView tvResetPass;
+    CheckBox cbRembemberPass;
+
+    public static final String MyPREFERENCES = "MyPrefs";
+    public static final String USERNAME = "userNameKey";
+    public static final String PASS = "passKey";
+    public static final String REMEMBER = "remember";
+    SharedPreferences sharedPreferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         anhxa();
+        sharedPreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+        loadData();
 
 
+
+    }
+
+    private void clearData() {
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.clear();
+        editor.commit();
+    }
+
+    private void saveData(String username, String Pass) {
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(USERNAME, username);
+        editor.putString(PASS, Pass);
+        editor.putBoolean(REMEMBER,cbRembemberPass.isChecked());
+        editor.commit();
+    }
+
+    private void loadData() {
+        if(sharedPreferences.getBoolean(REMEMBER,false)) {
+            edtUser.setText(sharedPreferences.getString(USERNAME, ""));
+            edtPass.setText(sharedPreferences.getString(PASS, ""));
+            cbRembemberPass.setChecked(true);
+        }
+        else
+            cbRembemberPass.setChecked(false);
 
     }
 
@@ -46,6 +83,7 @@ public class LoginActivity extends AppCompatActivity {
         edtUser = findViewById(R.id.edtUser);
         edtPass = findViewById(R.id.edtPass);
         btnLogin = findViewById(R.id.btnLogin);
+        cbRembemberPass = findViewById(R.id.cb_rememberPass);
 
         tvResetPass.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,8 +98,18 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FunctionLogin();
-
+                String userLogin = edtUser.getText().toString().trim();
+                String passLogin = edtPass.getText().toString().trim();
+                if (cbRembemberPass.isChecked())
+                    //lưu lại thông tin đăng nhập
+                    saveData(edtUser.getText().toString(), edtPass.getText().toString());
+                else
+                    clearData();//xóa thông tin đã lưu
+                //nếu thông tin đăng nhập đúng thì đến màng hình home
+                if (edtUser.getText().toString().equals(userLogin) && edtPass.getText().toString().equals(passLogin)) {
+                    FunctionLogin();
+                } else
+                    Toast.makeText(LoginActivity.this, "Thông tin đăng nhập không đúng", Toast.LENGTH_SHORT).show();
             }
         });
 
