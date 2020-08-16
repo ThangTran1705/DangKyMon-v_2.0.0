@@ -52,8 +52,7 @@ public class SettingActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(SettingActivity.this, LanguageActivity.class);
-//                i.putExtra("maSV",maSV);
-
+                i.putExtra("maSV",maSV);
                 startActivity(i);
             }
         });
@@ -87,9 +86,8 @@ public class SettingActivity extends AppCompatActivity {
         imgBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(SettingActivity.this, HomeActivity.class);
-//                i.putExtra("idSV",idSV);
-                startActivity(i);
+
+                finish();
             }
         });
 

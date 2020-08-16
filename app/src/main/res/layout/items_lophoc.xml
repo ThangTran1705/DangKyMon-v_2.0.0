@@ -3,126 +3,20 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:layout_marginTop="20dp">
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="96dp"
-        android:layout_height="107dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <TextView
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        app:cardBackgroundColor="@color/imageBorderColor"
-        app:cardCornerRadius="16dp">
-
-        <ImageView
-            android:layout_width="74dp"
-            android:layout_height="71dp"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:adjustViewBounds="true"
-            android:cropToPadding="true"
-            android:maxWidth="70dp"
-            app:srcCompat="@drawable/lophoc" />
-
-    </androidx.cardview.widget.CardView>
-
-    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/tvLopHoc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginBottom="10dp"
-        android:orientation="vertical">
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Lớp học: "
-                android:textStyle="bold"
-                android:textColor="@color/miniTitle"
-                android:textSize="17sp"
-                android:layout_marginBottom="5dp" />
-            <TextView
-                android:id="@+id/tvLopHoc"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Đang Cập Nhật..."
-                android:textColor="@color/miniTitle"
-                android:textSize="17sp"
-                android:layout_marginBottom="5dp" />
-        </LinearLayout>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Môn học: "
-                android:textColor="@color/miniTitle"
-                android:textSize="17sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="5dp" />
-            <TextView
-                android:id="@+id/tvTenMonHoc"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Đang Cập Nhật..."
-                android:textColor="@color/miniTitle"
-                android:textSize="17sp"
-                android:layout_marginBottom="5dp" />
-        </LinearLayout>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Giảng viên: "
-                android:textStyle="bold"
-                android:textColor="@color/miniTitle"
-                android:textSize="17sp"
-                android:layout_marginBottom="5dp" />
-            <TextView
-                android:id="@+id/tvGiangVien"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Đang Cập Nhật..."
-                android:textColor="@color/miniTitle"
-                android:textSize="17sp"
-                android:layout_marginBottom="5dp" />
+        android:hint="Đang cập nhật dữ liệu"
+        android:textColor="@color/miniTitle"
+        android:textSize="17sp"
+        android:layout_marginBottom="5dp" />
 
 
 
-        </LinearLayout>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Ca học: "
-                android:textColor="@color/miniTitle"
-                android:textSize="17sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="5dp" />
-            <TextView
-                android:id="@+id/tvCaHoc"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Đang Cập Nhật..."
-                android:textColor="@color/miniTitle"
-                android:textSize="17sp"
-                android:layout_marginBottom="5dp" />
-        </LinearLayout>
-
-
-    </LinearLayout>
 </LinearLayout>

@@ -30,8 +30,8 @@
                 <TextView
                     style="@style/viewParent.headerText.NoMode"
                     android:layout_alignParentLeft="true"
-                    android:layout_marginLeft="19dp"
-                    android:text="Đăng Ký \n   Ngành Học"
+                    android:layout_marginLeft="20dp"
+                    android:text="Đăng Ký \n   Môn Học"
                     android:textColor="@color/whiteTextColor"
                     android:textSize="35sp" />
 

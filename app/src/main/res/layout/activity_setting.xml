@@ -19,7 +19,7 @@
             android:textSize="30sp"
             android:background="@color/register_bk_color"
             android:textStyle="bold"
-            android:padding="10dp"
+            android:padding="8dp"
             android:gravity="center" />
 
         <ImageButton
@@ -63,7 +63,7 @@
                     style="@style/viewParent.headerText1"
                     android:layout_marginTop="20dp"
                     android:layout_toRightOf="@id/ImgUser"
-                    android:hint="Họ Và Tên"
+                    android:hint="Đang Cập Nhật..."
                     android:textSize="25sp" />
 
                 <TextView
@@ -71,7 +71,7 @@
                     style="@style/viewParent.headerText1"
                     android:layout_below="@id/tvTen"
                     android:layout_toRightOf="@id/ImgUser"
-                    android:hint="MSSV"
+                    android:hint="Đang Cập Nhật..."
                     android:textColor="#5D5C5C"
                     android:textSize="15sp" />
 
