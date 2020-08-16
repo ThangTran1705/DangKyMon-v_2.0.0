@@ -1,31 +1,26 @@
 package com.example.dangkymonhoc.Model;
 
 public class LopHoc {
-    String idSV;
+
     int idLopHoc;
     String LopHoc;
     String TenMonHoc;
     String GiangVien;
     String CaHoc;
+    String Ngay;
+
+
     public  LopHoc(){
 
     }
 
-    public LopHoc(String idSV, int idLopHoc, String lopHoc, String tenMonHoc, String giangVien, String caHoc) {
-        this.idSV = idSV;
+    public LopHoc(int idLopHoc, String lopHoc, String tenMonHoc, String giangVien, String caHoc, String ngay) {
         this.idLopHoc = idLopHoc;
         LopHoc = lopHoc;
         TenMonHoc = tenMonHoc;
         GiangVien = giangVien;
         CaHoc = caHoc;
-    }
-
-    public String getIdSV() {
-        return idSV;
-    }
-
-    public void setIdSV(String idSV) {
-        this.idSV = idSV;
+        Ngay = ngay;
     }
 
     public int getIdLopHoc() {
@@ -66,5 +61,13 @@ public class LopHoc {
 
     public void setCaHoc(String caHoc) {
         CaHoc = caHoc;
+    }
+
+    public String getNgay() {
+        return Ngay;
+    }
+
+    public void setNgay(String ngay) {
+        Ngay = ngay;
     }
 }
