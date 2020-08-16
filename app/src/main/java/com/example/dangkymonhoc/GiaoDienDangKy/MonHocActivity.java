@@ -74,7 +74,7 @@ public class MonHocActivity extends AppCompatActivity {
                                     JSONObject data = jsonArray.getJSONObject(i);
 
                                     MonHoc monHoc = new MonHoc();
-                                    monHoc.setIdSV(idSV);
+//                                    monHoc.setIdSV(idSV);
                                     monHoc.setIdMonHoc(data.getInt("IdMonHoc"));
                                     monHoc.setMaMon(data.getString("MaMonHoc"));
                                     monHoc.setMonHoc(data.getString("MonHoc"));
