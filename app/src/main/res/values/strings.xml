@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DangKyMonHoc</string>
+    <string name="app_name">Đăng Ký Môn Học</string>
 
     //login
     <string name="reset_email_hint">Email</string>
