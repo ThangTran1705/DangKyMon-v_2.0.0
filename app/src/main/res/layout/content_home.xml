@@ -146,8 +146,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <include layout="@layout/card_danhsach" />
-                <include layout="@layout/card_trangthai" />
+                <include layout="@layout/card_dangkymonhoc" />
+                <include layout="@layout/card_monhoc" />
                 <include layout="@layout/card_lichhoc" />
 
             </LinearLayout>

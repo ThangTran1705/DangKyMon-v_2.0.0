@@ -1,7 +1,7 @@
 package com.example.dangkymonhoc.Model;
 
 public class LopHoc {
-
+    String idSV;
     int idLopHoc;
     String LopHoc;
     String TenMonHoc;
@@ -11,8 +11,8 @@ public class LopHoc {
 
     }
 
-    public LopHoc( int idLopHoc, String lopHoc, String tenMonHoc, String giangVien, String caHoc) {
-
+    public LopHoc(String idSV, int idLopHoc, String lopHoc, String tenMonHoc, String giangVien, String caHoc) {
+        this.idSV = idSV;
         this.idLopHoc = idLopHoc;
         LopHoc = lopHoc;
         TenMonHoc = tenMonHoc;
@@ -20,7 +20,13 @@ public class LopHoc {
         CaHoc = caHoc;
     }
 
+    public String getIdSV() {
+        return idSV;
+    }
 
+    public void setIdSV(String idSV) {
+        this.idSV = idSV;
+    }
 
     public int getIdLopHoc() {
         return idLopHoc;

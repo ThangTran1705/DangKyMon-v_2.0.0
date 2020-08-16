@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="5dp"
-
+            android:gravity="center"
             android:text="Tên Ngành Học"
             android:textColor="@color/miniTitle"
             android:textSize="17sp"
@@ -53,7 +53,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
-
+            android:gravity="center"
             android:hint="Đang Cập Nhật..."
             android:textColor="@color/miniTitle"
             android:textSize="20sp" />

@@ -73,7 +73,7 @@ public class LopHocActivity extends AppCompatActivity {
                                 for (int i=0;i<jsonArray.length();i++){
                                     JSONObject data = jsonArray.getJSONObject(i);
                                     LopHoc lopHoc = new LopHoc();
-//
+                                    lopHoc.setIdSV(idSV);
                                     lopHoc.setIdLopHoc(data.getInt("Id_LopHoc"));
                                     lopHoc.setLopHoc(data.getString("LopHoc"));
                                     lopHoc.setTenMonHoc(data.getString("MonHoc"));
