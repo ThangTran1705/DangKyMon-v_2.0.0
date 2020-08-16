@@ -76,14 +76,16 @@
                             android:text="123123"
                             android:inputType="textPassword"/>
                     </com.google.android.material.textfield.TextInputLayout>
+
                     <CheckBox
+
                         android:id="@+id/cb_rememberPass"
                         style="@style/viewParent"
-                        android:text="Nho mật khẩu?"
+                        android:layout_marginTop="10dp"
+                        android:text="Nhớ mật khẩu?"
                         android:textColor="@color/primaryTextColor"
-                        android:textSize="@dimen/newsMoreTextSize"
-                        android:layout_gravity="end"
-                        android:layout_marginTop="10dp"/>
+                        android:textSize="@dimen/newsMoreTextSize" />
+
                     <TextView
                         android:id="@+id/tvResetPass"
                         style="@style/viewParent"
