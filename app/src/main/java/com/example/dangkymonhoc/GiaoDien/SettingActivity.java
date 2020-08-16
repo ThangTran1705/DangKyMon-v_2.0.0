@@ -87,15 +87,7 @@ public class SettingActivity extends AppCompatActivity {
         imgBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-<<<<<<< Updated upstream
-                Intent i = new Intent(SettingActivity.this, HomeActivity.class);
-                i.putExtra("maSV",maSV);
-                startActivity(i);
-=======
-//                Intent i = new Intent(SettingActivity.this, HomeActivity.class);
-////                i.putExtra("idSV",idSV);
-//                startActivity(i);
->>>>>>> Stashed changes
+
                 finish();
             }
         });
